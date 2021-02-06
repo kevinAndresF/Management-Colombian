@@ -40,12 +40,16 @@ namespace colombia_management
                 //agregamos una fila
                 int n = table.Rows.Add();
 
+                // dividimos en un arreglo cada celda
+                String[] values = lines[i].Split(',');
+
                 //colocamos informacion
-                table.Rows[n].Cells[0].Value = "1";
-                table.Rows[n].Cells[1].Value = "1";
-                table.Rows[n].Cells[2].Value = "1";
-                table.Rows[n].Cells[3].Value = "1";
-                table.Rows[n].Cells[4].Value = "1";
+                table.Rows[n].Cells[0].Value = values[0];
+                table.Rows[n].Cells[1].Value = values[1];
+                table.Rows[n].Cells[2].Value = values[2];
+                table.Rows[n].Cells[3].Value = values[3];
+                table.Rows[n].Cells[4].Value = values[4];
+
             }
         }
     }
