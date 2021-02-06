@@ -35,15 +35,18 @@ namespace colombia_management
             String[] lines;
             lines = File.ReadAllLines(txtPath.Text);
 
-            //agregamos una fila
-            int n = table.Rows.Add();
+            for (int i = 0; i < lines.Length; i++)
+            {
+                //agregamos una fila
+                int n = table.Rows.Add();
 
-            //colocamos informacion
-            table.Rows[n].Cells[0].Value = "1";
-            table.Rows[n].Cells[1].Value = "1";
-            table.Rows[n].Cells[2].Value = "1";
-            table.Rows[n].Cells[3].Value = "1";
-            table.Rows[n].Cells[4].Value = "1";
+                //colocamos informacion
+                table.Rows[n].Cells[0].Value = "1";
+                table.Rows[n].Cells[1].Value = "1";
+                table.Rows[n].Cells[2].Value = "1";
+                table.Rows[n].Cells[3].Value = "1";
+                table.Rows[n].Cells[4].Value = "1";
+            }
         }
     }
 }
