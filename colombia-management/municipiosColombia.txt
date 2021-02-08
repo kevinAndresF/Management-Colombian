@@ -1,5 +1,4 @@
-CÃ³digo Departamento,CÃ³digo Municipio,Nombre Departamento,Nombre Municipio,Tipo: Municipio / Isla / Ãrea no municipalizada
-05,05001,ANTIOQUIA,MEDELLÃN,Municipio
+05,05001,ANTIOQUIA,MEDELLIN,Municipio
 05,05002,ANTIOQUIA,ABEJORRAL,Municipio
 05,05004,ANTIOQUIA,ABRIAQUÃ,Municipio
 05,05021,ANTIOQUIA,ALEJANDRÃA,Municipio
@@ -9,7 +8,7 @@ CÃ³digo Departamento,CÃ³digo Municipio,Nombre Departamento,Nombre Municipio,
 05,05036,ANTIOQUIA,ANGELÃ“POLIS,Municipio
 05,05038,ANTIOQUIA,ANGOSTURA,Municipio
 05,05040,ANTIOQUIA,ANORÃ,Municipio
-05,05042,ANTIOQUIA,SANTA FÃ‰ DE ANTIOQUIA,Municipio
+05,05042,ANTIOQUIA,SANTA FE DE ANTIOQUIA,Municipio
 05,05044,ANTIOQUIA,ANZÃ,Municipio
 05,05045,ANTIOQUIA,APARTADÃ“,Municipio
 05,05051,ANTIOQUIA,ARBOLETES,Municipio
@@ -1120,8 +1119,3 @@ CÃ³digo Departamento,CÃ³digo Municipio,Nombre Departamento,Nombre Municipio,
 99,99524,VICHADA,LA PRIMAVERA,Municipio
 99,99624,VICHADA,SANTA ROSALÃA,Municipio
 99,99773,VICHADA,CUMARIBO,Municipio
-Fuente: DANE.,,,,
-Nota: En la actualidad el paÃ­s se compone de 1.102 municipios. 18 Ãreas no municipalizadas y la Isla de San AndrÃ©s.,,,,
-Actualizado al: 10 de Junio de 2020,,,,
-*Desde el 1 de diciembre de 2019 comenzÃ³ a regir la Ordenanza 248 de 2019 de la Asamblea Departamental de GuainÃ­a que crea el municipio de Barrancominas.,,,,
-conformado por las Ã¡reas no municipalizadas de Barrancominas y Mapiripana. Se incorporÃ³ en la DIVIPOLA en Mayo de 2020 una vez definida la informaciÃ³n geogrÃ¡fica por el IGAC.,,,,
