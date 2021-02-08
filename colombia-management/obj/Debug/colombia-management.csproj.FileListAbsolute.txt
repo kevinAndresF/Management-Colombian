@@ -8,3 +8,13 @@ D:\universidad\semestre 5\integrador 1\primera\colombia-management\bin\Debug\col
 D:\universidad\semestre 5\integrador 1\primera\colombia-management\bin\Debug\colombia-management.pdb
 D:\universidad\semestre 5\integrador 1\primera\colombia-management\obj\Debug\colombia-management.exe
 D:\universidad\semestre 5\integrador 1\primera\colombia-management\obj\Debug\colombia-management.pdb
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\bin\Debug\colombia-management.exe.config
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\bin\Debug\colombia-management.exe
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\bin\Debug\colombia-management.pdb
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia-management.csprojAssemblyReference.cache
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia_management.Form1.resources
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia_management.Properties.Resources.resources
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia-management.csproj.GenerateResource.cache
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia-management.csproj.CoreCompileInputs.cache
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia-management.exe
+E:\universidad\TEMP 5\PROYECTO INTEGRADOR\Management-Colombian\colombia-management\obj\Debug\colombia-management.pdb

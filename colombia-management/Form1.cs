@@ -52,5 +52,45 @@ namespace colombia_management
 
             }
         }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog buscar = new OpenFileDialog();
+            if (buscar.ShowDialog() == DialogResult.OK)
+            {
+                txtPath.Text = buscar.FileName;
+            }
+            String[] lines;
+            lines = File.ReadAllLines(txtPath.Text);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                
+
+                // dividimos en un arreglo cada celda
+                String[] values = lines[i].Split(',');
+
+                String dpt = values[2];
+                String dptSelected = comboBox1.Text;
+
+                if (dpt.Equals(dptSelected))
+                {
+                    //agregamos una fila
+                    int n = table.Rows.Add();
+
+                    //colocamos informacion
+                    table.Rows[n].Cells[0].Value = values[0];
+                    table.Rows[n].Cells[1].Value = values[1];
+                    table.Rows[n].Cells[2].Value = values[2];
+                    table.Rows[n].Cells[3].Value = values[3];
+                    table.Rows[n].Cells[4].Value = values[4];
+                }
+
+                
+
+            }
+
+        }
     }
 }
