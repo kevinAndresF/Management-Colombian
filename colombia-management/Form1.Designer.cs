@@ -29,6 +29,9 @@ namespace colombia_management
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
@@ -40,7 +43,9 @@ namespace colombia_management
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BtnFiltrar = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -83,7 +88,7 @@ namespace colombia_management
             this.table.Location = new System.Drawing.Point(15, 58);
             this.table.Name = "table";
             this.table.RowHeadersWidth = 51;
-            this.table.Size = new System.Drawing.Size(543, 340);
+            this.table.Size = new System.Drawing.Size(543, 350);
             this.table.TabIndex = 3;
             // 
             // depCode
@@ -165,12 +170,12 @@ namespace colombia_management
             "VICHADA"});
             this.comboBox1.Location = new System.Drawing.Point(591, 58);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 24);
+            this.comboBox1.Size = new System.Drawing.Size(365, 24);
             this.comboBox1.TabIndex = 4;
             // 
             // BtnFiltrar
             // 
-            this.BtnFiltrar.Location = new System.Drawing.Point(787, 58);
+            this.BtnFiltrar.Location = new System.Drawing.Point(992, 58);
             this.BtnFiltrar.Name = "BtnFiltrar";
             this.BtnFiltrar.Size = new System.Drawing.Size(109, 23);
             this.BtnFiltrar.TabIndex = 5;
@@ -178,9 +183,26 @@ namespace colombia_management
             this.BtnFiltrar.UseVisualStyleBackColor = true;
             this.BtnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(591, 104);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(510, 304);
+            this.chart1.TabIndex = 6;
+            this.chart1.Text = "chart1";
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(908, 438);
+            this.ClientSize = new System.Drawing.Size(1124, 420);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.BtnFiltrar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.table);
@@ -189,6 +211,7 @@ namespace colombia_management
             this.Controls.Add(this.btnSearch);
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +230,7 @@ namespace colombia_management
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button BtnFiltrar;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

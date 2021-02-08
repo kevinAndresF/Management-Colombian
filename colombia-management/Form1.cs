@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using System.Diagnostics;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace colombia_management
 {
@@ -27,6 +28,11 @@ namespace colombia_management
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            table.Rows.Clear();
+            chart1.Series.Clear();
+
+            int numM = 0;
+
             OpenFileDialog buscar = new OpenFileDialog();
             if (buscar.ShowDialog() == DialogResult.OK)
             {
@@ -49,12 +55,62 @@ namespace colombia_management
                 table.Rows[n].Cells[2].Value = values[2];
                 table.Rows[n].Cells[3].Value = values[3];
                 table.Rows[n].Cells[4].Value = values[4];
+                numM++;
+            }
 
+            String[] tiposM = { "Municipio", "Isla", "Area No Mu" };
+
+            chart1.Titles.Clear();
+
+
+            chart1.Titles.Add("Tipos de Municipios");
+            int cantMun = 0;
+            int cantIsla = 0;
+            int cantAreaNoM = 0;
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Municipio".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                {
+                    cantMun++;
+                }
+            }
+
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Isla".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                {
+                    cantIsla++;
+                }
+            }
+
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Ãrea no municipalizada".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                {
+                    cantAreaNoM++;
+                }
+            }
+
+            int[] cant = { cantMun, cantIsla, cantAreaNoM };
+
+            chart1.Palette = ChartColorPalette.Berry;
+
+
+            for (int i = 0; i < tiposM.Length; i++)
+            {
+                Series serie = chart1.Series.Add(tiposM[i]);
+
+                serie.Label = cant[i].ToString();
+                serie.Points.Add(cant[i]);
             }
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            table.Rows.Clear();
+            chart1.Series.Clear();
+
+            int numM = 0;
 
             OpenFileDialog buscar = new OpenFileDialog();
             if (buscar.ShowDialog() == DialogResult.OK)
@@ -66,7 +122,7 @@ namespace colombia_management
 
             for (int i = 0; i < lines.Length; i++)
             {
-                
+
 
                 // dividimos en un arreglo cada celda
                 String[] values = lines[i].Split(',');
@@ -85,12 +141,60 @@ namespace colombia_management
                     table.Rows[n].Cells[2].Value = values[2];
                     table.Rows[n].Cells[3].Value = values[3];
                     table.Rows[n].Cells[4].Value = values[4];
-                }
 
-                
+                    numM++;
+                }
 
             }
 
+            String[] tiposM = { "Municipio", "Isla", "Area No Mu" };
+
+            chart1.Titles.Clear();
+
+
+            chart1.Titles.Add("Tipos de Municipios");
+            int cantMun = 0;
+            int cantIsla = 0;
+            int cantAreaNoM = 0;
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Municipio".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                { 
+                    cantMun++;
+                }
+            }
+
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Isla".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                {
+                    cantIsla++;
+                }
+            }
+
+            for (int i = 0; i < numM; i++)
+            {
+                if ("Ãrea no municipalizada".Equals(table.Rows[i].Cells[4].Value.ToString()))
+                {
+                    cantAreaNoM++;
+                }
+            }
+
+            int[] cant = {cantMun , cantIsla , cantAreaNoM };
+
+            chart1.Palette = ChartColorPalette.Berry;
+
+
+            for (int i = 0; i < tiposM.Length; i++)
+            {
+                Series serie = chart1.Series.Add(tiposM[i]);
+
+                serie.Label = cant[i].ToString();
+                serie.Points.Add(cant[i]);
+            }
+
         }
+
+
     }
 }
